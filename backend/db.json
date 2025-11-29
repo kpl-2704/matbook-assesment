@@ -1,0 +1,133 @@
+{
+  "submissions": [
+    {
+      "id": "EveS4KUQ6EfkKds2FGuFb",
+      "createdAt": "2025-11-29T07:11:08.965Z",
+      "data": {
+        "firstName": "Kapil",
+        "lastName": "Madankar",
+        "age": "27",
+        "startDate": "2025-11-15",
+        "role": "Developer",
+        "skills": [
+          "React"
+        ],
+        "bio": "hello dev",
+        "remote": true
+      }
+    },
+    {
+      "id": "GcNzGWQo1Qp3s7EZfatk8",
+      "createdAt": "2025-11-29T07:08:15.658Z",
+      "data": {
+        "firstName": "Kapil",
+        "lastName": "Madankar",
+        "age": "24",
+        "startDate": "2025-11-28",
+        "role": "Developer",
+        "skills": [
+          "React"
+        ],
+        "bio": "Hello dev",
+        "remote": true
+      }
+    }
+  ],
+  "schema": {
+    "title": "Employee Onboarding",
+    "description": "Collect basic employee details for onboarding.",
+    "fields": [
+      {
+        "name": "firstName",
+        "label": "First Name",
+        "type": "text",
+        "placeholder": "John",
+        "required": true,
+        "validation": {
+          "minLength": 2,
+          "maxLength": 50
+        }
+      },
+      {
+        "name": "lastName",
+        "label": "Last Name",
+        "type": "text",
+        "placeholder": "Doe",
+        "required": true,
+        "validation": {
+          "minLength": 2,
+          "maxLength": 50
+        }
+      },
+      {
+        "name": "age",
+        "label": "Age",
+        "type": "number",
+        "placeholder": "30",
+        "required": true,
+        "validation": {
+          "min": 18,
+          "max": 80
+        }
+      },
+      {
+        "name": "startDate",
+        "label": "Start Date",
+        "type": "date",
+        "placeholder": "",
+        "required": true,
+        "validation": {
+          "minDate": "2020-01-01"
+        }
+      },
+      {
+        "name": "role",
+        "label": "Role",
+        "type": "select",
+        "placeholder": "Select role",
+        "required": true,
+        "options": [
+          "Developer",
+          "Designer",
+          "Product",
+          "HR"
+        ]
+      },
+      {
+        "name": "skills",
+        "label": "Skills",
+        "type": "multi-select",
+        "placeholder": "Select skills",
+        "required": false,
+        "options": [
+          "React",
+          "Node",
+          "SQL",
+          "Design",
+          "Testing"
+        ],
+        "validation": {
+          "minSelected": 0,
+          "maxSelected": 5
+        }
+      },
+      {
+        "name": "bio",
+        "label": "Biography",
+        "type": "textarea",
+        "placeholder": "A short bio",
+        "required": false,
+        "validation": {
+          "maxLength": 500
+        }
+      },
+      {
+        "name": "remote",
+        "label": "Remote Worker",
+        "type": "switch",
+        "placeholder": "",
+        "required": false
+      }
+    ]
+  }
+}
