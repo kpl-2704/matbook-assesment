@@ -2,5 +2,6 @@ services:
   - type: web
     name: matbook-backend
     env: node
-    buildCommand: "npm install"
+    # Install backend dependencies, then build the frontend using legacy-peer-deps
+    buildCommand: "npm ci && cd ../frontend && npm ci --legacy-peer-deps && npm run build"
     startCommand: "npm start"
