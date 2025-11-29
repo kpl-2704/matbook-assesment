@@ -1,7 +1,7 @@
 export default {
   server: {
     proxy: {
-      "/api": "http://localhost:4000",
+      "/api": "https://matbook-assesment.onrender.com",
     },
   },
 };
